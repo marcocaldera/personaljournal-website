@@ -38,9 +38,15 @@ jobs:
         with:
           static_site_generator: next
 
-      - run: yarn build
-        # env:
-        #   NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+      - name: Build Next.js app
+        run: yarn build
+
+      - name: Debug directory structure
+        run: |
+          echo "Current directory contents:"
+          ls -la
+          echo "\nOutput directory contents (if exists):"
+          ls -la out || echo "out directory does not exist"
 
       - uses: actions/upload-pages-artifact@v3
         with:
