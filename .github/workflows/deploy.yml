@@ -32,20 +32,26 @@ jobs:
           node-version: "20"
           cache: 'yarn'
 
-      - run: yarn install --frozen-lockfile
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
       - uses: actions/configure-pages@v4
         with:
           static_site_generator: next
 
+      - name: Generate content with Contentlayer
+        run: yarn contentlayer build
+
       - name: Build Next.js app
-        run: yarn build
+        run: yarn next build
 
       - name: Debug directory structure
         run: |
           echo "Current directory contents:"
           ls -la
-          echo "\nOutput directory contents (if exists):"
+          echo "\nContentlayer directory contents:"
+          ls -la .contentlayer || echo ".contentlayer directory does not exist"
+          echo "\nOutput directory contents:"
           ls -la out || echo "out directory does not exist"
 
       - uses: actions/upload-pages-artifact@v3
