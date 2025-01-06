@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "contentlayer build && next build && next export",
+    "build": "contentlayer build && next build",
     "contentlayer": "contentlayer build",
     "start": "next start",
     "lint": "next lint"

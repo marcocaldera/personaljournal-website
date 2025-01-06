@@ -1,10 +1,12 @@
+import type { BlogPost } from "@/types/post"
+
 export function generateWebsiteStructuredData() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Journal App",
+    name: "Personal Journal",
     description: "Your daily companion for personal reflection and growth",
-    url: "https://journalapp.com",
+    url: "https://personaljournal.nl",
   }
 }
 
