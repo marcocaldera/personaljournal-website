@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "contentlayer build && next build && touch out/.nojekyll",
+    "build": "contentlayer build && next build && next export",
     "contentlayer": "contentlayer build",
     "start": "next start",
     "lint": "next lint"
