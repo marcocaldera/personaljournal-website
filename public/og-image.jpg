@@ -1,0 +1,13 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#EDEDFE"/>
+  
+  <!-- Logo/App Icon -->
+  <rect x="400" y="215" width="400" height="200" rx="20" fill="#595CE9"/>
+  <text x="600" y="340" text-anchor="middle" fill="#EDEDFE" font-size="64" font-family="system-ui">
+    Journal App
+  </text>
+  <text x="600" y="390" text-anchor="middle" fill="#EDEDFE" font-size="24" font-family="system-ui">
+    Your daily companion for personal reflection
+  </text>
+</svg> 

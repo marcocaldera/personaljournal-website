@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 240 254;
+    --foreground: 28 28 31;
+  }
+
+  .dark {
+    --background: 28 28 31;
+    --foreground: 237 237 254;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-light dark:bg-dark text-surface dark:text-light antialiased;
+  }
+}
+
+/* Add some basic styles for better default appearance */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} 
