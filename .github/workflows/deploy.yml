@@ -40,7 +40,7 @@ jobs:
           static_site_generator: next
 
       - name: Generate content with Contentlayer
-        run: yarn contentlayer build
+        run: yarn contentlayer
 
       - name: Build Next.js app
         run: yarn next build
