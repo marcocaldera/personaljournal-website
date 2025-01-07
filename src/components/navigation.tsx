@@ -1,21 +1,14 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
-import { useTheme } from "next-themes"
 import { motion } from "framer-motion"
 import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
+import { useThemeDetection } from "@/hooks/use-theme-detection"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
-  const { theme, systemTheme, setTheme } = useTheme()
-  
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-  
-  const isDarkTheme = theme === "system" ? systemTheme === "dark" : theme === "dark"
+  const { isDarkTheme, mounted, setTheme } = useThemeDetection()
 
   const renderThemeIcon = () => {
     if (!mounted) {
