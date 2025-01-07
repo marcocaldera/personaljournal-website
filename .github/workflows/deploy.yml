@@ -3,10 +3,8 @@ name: Deploy to GitHub Pages
 
 # Trigger conditions
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: [ "main" ]
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -26,7 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -35,15 +32,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
-
-      - name: Generate content with Contentlayer
-        run: yarn contentlayer
-
-      - name: Build Next.js app
-        run: yarn next build
+      - run: yarn build
 
       - name: Debug directory structure
         run: |
