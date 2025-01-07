@@ -33,6 +33,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - run: yarn build
+      - run: echo "personaljournal.nl" > CNAME
 
       - name: Debug directory structure
         run: |
