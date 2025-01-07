@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import { motion } from "framer-motion"
@@ -8,7 +8,26 @@ import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/out
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  const { theme, systemTheme, setTheme } = useTheme()
+  
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+  
+  const isDarkTheme = theme === "system" ? systemTheme === "dark" : theme === "dark"
+
+  const renderThemeIcon = () => {
+    if (!mounted) {
+      return <div className="h-5 w-5" />
+    }
+    
+    if (isDarkTheme) {
+      return <SunIcon className="h-5 w-5" />
+    }
+    
+    return <MoonIcon className="h-5 w-5" />
+  }
 
   const navItems = [
     { name: "Features", href: "/#features" },
@@ -37,14 +56,11 @@ export function Navigation() {
               </Link>
             ))}
             <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => setTheme(isDarkTheme ? "light" : "dark")}
               className="p-2 rounded-lg bg-light dark:bg-surface"
+              aria-label="Toggle theme"
             >
-              {theme === "dark" ? (
-                <SunIcon className="h-5 w-5" />
-              ) : (
-                <MoonIcon className="h-5 w-5" />
-              )}
+              {renderThemeIcon()}
             </button>
           </div>
 
