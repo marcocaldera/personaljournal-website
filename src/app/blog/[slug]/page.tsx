@@ -5,6 +5,8 @@ import type { BlogPost } from "@/types/post"
 import { Metadata } from "next"
 import { defaultMetadata } from "../../metadata"
 import { generateBlogPostStructuredData } from "../../structured-data"
+import { LinkAnalytics } from "@/components/analytics/link-analytics"
+import { BlogPostAnalytics } from "@/components/blog/blog-post-analytics";
 
 interface PostPageProps {
   params: {
@@ -72,6 +74,8 @@ export default function PostPage({ params }: PostPageProps) {
           __html: JSON.stringify(generateBlogPostStructuredData(post)),
         }}
       />
+      <BlogPostAnalytics post={post} />
+      <LinkAnalytics />
       <article className="py-24 bg-light dark:bg-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <PostContent post={post} />

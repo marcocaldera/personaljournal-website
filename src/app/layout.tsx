@@ -2,7 +2,9 @@ import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { CookieNotice } from "@/components/cookie-notice"
+import { CookieConsentProvider } from "@/components/cookie-notice"
+import { AnalyticsProvider } from "@/components/providers/analytics-provider"
+import { LinkAnalytics } from "@/components/analytics/link-analytics"
 import "./globals.css"
 import { generateWebsiteStructuredData } from "./structured-data"
 
@@ -21,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -35,10 +38,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navigation />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-          <CookieNotice />
+          <CookieConsentProvider>
+            <AnalyticsProvider>
+              <LinkAnalytics />
+              <Navigation />
+              <main className="min-h-screen">{children}</main>
+              <Footer />
+            </AnalyticsProvider>
+          </CookieConsentProvider>
         </ThemeProvider>
       </body>
     </html>
