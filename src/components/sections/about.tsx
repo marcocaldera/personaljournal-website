@@ -33,17 +33,16 @@ export function About() {
             </h2>
             <div className="space-y-4 text-surface/80 dark:text-light/80">
               <p>
-                We started this journey with a simple mission: to help people
-                capture their thoughts and feelings in a meaningful way.
+                At the heart of our philosophy lies a simple yet powerful belief: everyone deserves a safe space to explore their thoughts and nurture their mental wellbeing.
               </p>
               <p>
-                Our team of mindfulness experts and developers worked together to
-                create an app that makes journaling both easy and insightful.
+                We recognise that mental health is paramount in today&apos;s world. That&apos;s why we&apos;ve created this thoughtfully designed space where you can freely express yourself through journaling.
               </p>
               <p>
-                Today, we&apos;re proud to help thousands of people around the world
-                maintain their daily journaling practice and discover insights
-                about themselves.
+                Our commitment goes beyond just providing a digital journal—we&apos;re dedicated to supporting your journey towards better mental health and self-discovery, one entry at a time.
+              </p>
+              <p>
+                We believe that financial circumstances should never be a barrier to mental wellbeing. If you&apos;re facing hardship and need access to our premium features, please reach out—we&apos;ll ensure you get the support you need, free of charge.
               </p>
             </div>
           </motion.div>

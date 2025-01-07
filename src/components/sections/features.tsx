@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import {
   PencilSquareIcon,
   ChartBarIcon,
-  TagIcon,
+  MicrophoneIcon,
   CloudArrowUpIcon,
   LockClosedIcon,
   SparklesIcon,
@@ -13,7 +13,7 @@ import {
 const features = [
   {
     name: "Easy Journaling",
-    description: "Write your thoughts effortlessly with our intuitive interface and rich text editor.",
+    description: "Write your thoughts effortlessly with our intuitive interface and different type of editors.",
     icon: PencilSquareIcon,
   },
   {
@@ -22,9 +22,9 @@ const features = [
     icon: ChartBarIcon,
   },
   {
-    name: "Smart Tags",
-    description: "Organize your entries with intelligent tagging and easy search functionality.",
-    icon: TagIcon,
+    name: "Voice Recording",
+    description: "Capture your thoughts on the go with voice memos, perfect for those moments when typing isn't convenient.",
+    icon: MicrophoneIcon,
   },
   {
     name: "Cloud Sync",
@@ -33,12 +33,12 @@ const features = [
   },
   {
     name: "Private & Secure",
-    description: "End-to-end encryption ensures your thoughts remain completely private.",
+    description: "Encryption and pin code authentication ensures your thoughts remain completely private.",
     icon: LockClosedIcon,
   },
   {
-    name: "AI Insights",
-    description: "Gain meaningful insights about your well-being through AI-powered analysis.",
+    name: "Personal Journal AI",
+    description: "Get questions and prompts powered by AI to deepen your self-reflection.",
     icon: SparklesIcon,
   },
 ]
@@ -64,7 +64,7 @@ export function Features() {
             </p>
           </motion.div>
 
-          <div className="mt-20 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-32 grid grid-cols-1 gap-24 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.name}

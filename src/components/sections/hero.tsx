@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import Link from "next/link"
 import { useTheme } from "next-themes"
+import { AppStoreButton } from "../store/app-store-button"
 
 export function Hero() {
   const { theme } = useTheme()
@@ -27,20 +27,7 @@ export function Hero() {
               our app and start your journaling journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="https://apps.apple.com/nl/app/personal-journal-secure-diary/id1553430631"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-90 transition-opacity"
-              >
-                <Image
-                  src={theme === 'dark' ? "/app_store_white.svg" : "/app_store_black.svg"}
-                  alt="Download on the App Store"
-                  width={120}
-                  height={40}
-                  priority
-                />
-              </Link>
+              <AppStoreButton />
             </div>
           </motion.div>
           
@@ -78,7 +65,7 @@ export function Hero() {
                     alt="Journal writing interface"
                     width={280}
                     height={560}
-                    className="rounded-[2.5rem] shadow-2xl"
+                    className="rounded-[2.5rem]"
                     priority
                   />
                 </motion.div>
@@ -111,7 +98,7 @@ export function Hero() {
                     alt="Reflection interface"
                     width={280}
                     height={560}
-                    className="rounded-[2.5rem] shadow-2xl"
+                    className="rounded-[2.5rem]"
                     priority
                   />
                 </motion.div>
