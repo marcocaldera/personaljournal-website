@@ -24,7 +24,7 @@ export function Hero() {
             </h1>
             <p className="text-lg text-surface/80 dark:text-light/80 mb-8">
               Transform your daily reflections into meaningful insights. Download
-              our app and start your journaling journey today.
+              our app and start journaling today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <AppStoreButton />

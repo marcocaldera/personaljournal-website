@@ -18,9 +18,9 @@ const footerLinks = {
     { name: "Terms of Service", href: "/terms", external: false },
   ],
   social: [
-    { name: "Twitter", href: "https://twitter.com" },
+    // { name: "Twitter", href: "https://twitter.com" }
     { name: "Instagram", href: "https://instagram.com" },
-    { name: "LinkedIn", href: "https://linkedin.com" },
+    // { name: "LinkedIn", href: "https://linkedin.com" },
   ],
 }
 
@@ -104,7 +104,7 @@ export function Footer() {
           </motion.div>
 
           {/* Social Links */}
-          {/* <motion.div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -127,7 +127,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </motion.div> */}
+          </motion.div>
         </div>
 
         {/* Bottom Section */}

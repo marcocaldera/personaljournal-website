@@ -7,23 +7,27 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline"
 const faqs = [
   {
     question: "Is my journal data private and secure?",
-    answer: "Yes, absolutely! Your journals is encrypted and strict rules are applied to ensure that only you can access your journal entries. Your privacy is our top priority.",
+    answer: "Yes, absolutely! Your journal is encrypted and strict security protocols are applied to ensure that only you can access your entries. Your privacy is our utmost priority.",
+  },
+  {
+    question: "Do you use journal entries for research or analysis?",
+    answer: "No, we absolutely do not use your journal entries for any research, analysis, or studies. Your personal writings remain completely private and are never accessed or analysed for any purpose. We believe your thoughts should remain yours alone.",
   },
   {
     question: "Can I access my journal on multiple devices?",
-    answer: "Yes, your journal syncs automatically across all your devices when you're connected to the internet. You can write on your phone and read on your tablet!",
+    answer: "Yes, your journal is automatically synchronised across all your devices when you're connected to the internet. You can write on your mobile and read on your tablet!",
   },
   {
     question: "What happens if I lose my device?",
-    answer: "Don't worry! Your data is safely backed up in the cloud. Simply log in to your account on a new device to access all your journal entries.",
+    answer: "Don't worry! Your data is securely backed up in the cloud. Simply log in to your account on a new device to access all your journal entries.",
   },
   {
     question: "Is there a limit to how much I can write?",
-    answer: "No, there are no limits on entry length or the number of entries you can create. Write as much as you want!",
+    answer: "No, there are no limits on entry length or the number of entries you can create. Write as much as you'd like!",
   },
   {
     question: "Can I export my journal entries?",
-    answer: "Yes, you can export your entries in various formats including PDF and plain text, making it easy to keep a backup or print your journals.",
+    answer: "Yes, you can export your entries in various formats including PDF and plain text, making it straightforward to keep a backup or print your journals.",
   },
 ]
 
