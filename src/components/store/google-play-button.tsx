@@ -31,6 +31,7 @@ export function GooglePlayButton({ className = "" }: GooglePlayButtonProps) {
         {mounted ? (
           <Image
             src={imageSrc}
+            alt="Google Play"
             width={IMAGE_DIMENSIONS.width}
             height={IMAGE_DIMENSIONS.height}
             priority
