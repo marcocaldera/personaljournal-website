@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { useTheme } from "next-themes"
 import { AppStoreButton } from "../store/app-store-button"
+// import { GooglePlayButton } from "../store/google-play-button"
 
 export function Hero() {
   const { theme } = useTheme()
@@ -28,6 +29,7 @@ export function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <AppStoreButton />
+              {/* <GooglePlayButton /> */}
             </div>
           </motion.div>
           
