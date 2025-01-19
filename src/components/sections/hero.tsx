@@ -8,8 +8,6 @@ import { AppStoreButton } from "../store/app-store-button"
 import { useAnimationVariants } from "@/hooks/use-animation-variants"
 import { ErrorBoundary } from "../error-boundary"
 import { Metadata } from "../meta/metadata"
-import { Loading } from "../ui/loading"
-import { Suspense } from "react"
 import { useAnalytics } from "@/hooks/use-analytics"
 
 export const Hero: FC = () => {
@@ -26,12 +24,6 @@ export const Hero: FC = () => {
   const handleScreenshotHover = (screenshot: string) => {
     analytics.trackInteraction(`screenshot_${screenshot}`, "hover")
   }
-
-  const LoadingFallback = () => (
-    <div className="flex items-center justify-center min-h-[600px]">
-      <Loading size="lg" />
-    </div>
-  )
 
   const HeroContent = () => (
     <motion.div 
@@ -99,7 +91,7 @@ export const Hero: FC = () => {
                 alt="Journal writing interface showing the app's main writing screen"
                 width={280}
                 height={560}
-                className="rounded-[2.5rem] shadow-xl"
+                className="rounded-[2.5rem]"
                 priority
                 quality={90}
                 loading="eager"
@@ -125,7 +117,7 @@ export const Hero: FC = () => {
                 alt="Reflection interface displaying the journaling prompts and reflection tools"
                 width={280}
                 height={560}
-                className="rounded-[2.5rem] shadow-xl"
+                className="rounded-[2.5rem]"
                 priority
                 quality={90}
                 loading="eager"
