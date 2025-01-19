@@ -150,9 +150,7 @@ export const Hero: FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ErrorBoundary>
-            <Suspense fallback={<LoadingFallback />}>
               <HeroContent />
-            </Suspense>
           </ErrorBoundary>
         </div>
       </section>
